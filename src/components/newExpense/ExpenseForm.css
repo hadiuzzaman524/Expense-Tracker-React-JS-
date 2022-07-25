@@ -1,0 +1,22 @@
+.form-item__controls {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.form-item__control label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-item__control input {
+  font: inherit;
+  width: 15rem;
+  max-width: 100%;
+  padding: 0.6rem;
+  border-radius: 12px;
+  border: 2px solid black;
+}

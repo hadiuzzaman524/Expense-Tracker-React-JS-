@@ -2,6 +2,7 @@ import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
 import Card  from "./card";
 import {useState} from "react";
+import NewExpense from "./newExpense/NewExpense";
 
 function ExpenseItem(props) {
   
