@@ -2,35 +2,53 @@ import "./ExpenseForm.css";
 import React, { useState } from "react";
 
 const ExpenseForm = (props) => {
-  const [title, titleSeter] = useState("");
+  /* const [title, titleSeter] = useState("");
   const [amount, amountSeter] = useState("");
-  const [date, dateSeter] = useState("");
+  const [date, dateSeter] = useState("");*/
+
+  const [userInput, setUserInput] = useState({
+    title: "",
+    amount: "",
+    date: "",
+  });
 
   const submitForm = (event) => {
     event.preventDefault(); // stop submition time refresh
-   // console.log(amount);
+    // console.log(amount);
     //console.log(date);
     //console.log(title);
-    const expense = {
+    /* const expense = {
       title: title,
       date: Date(date),
       amount: amount,
-    };
-    props.onSubmitForm(expense);
+    };*/
+    props.onSubmitForm(userInput);
   };
   const titleTake = (value) => {
-    titleSeter(value.target.value);
-  //  console.log(amount);
+    // titleSeter(value.target.value);
+    setUserInput({
+      ...userInput, // just copy the previous state value and change the current one
+      title: value.target.value,
+    });
+    //  console.log(amount);
   };
 
   const expenseAmountTake = (value) => {
-    amountSeter(value.target.value);
-   // console.log(amount);
+    //amountSeter(value.target.value);
+    // console.log(amount);
+    setUserInput({
+      ...userInput, // just copy the previous state value and change the current one
+      amount: value.target.value,
+    });
   };
 
   const expenseDateTake = (value) => {
-    dateSeter(value.target.value);
-   // console.log(date);
+    // dateSeter(value.target.value);
+    // console.log(date);
+    setUserInput({
+      ...userInput, // just copy the previous state value and change the current one
+      date: value.target.value,
+    });
   };
 
   return (
