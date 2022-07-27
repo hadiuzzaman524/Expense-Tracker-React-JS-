@@ -26,9 +26,14 @@ const expenses = [
 ];
 
 function App() {
+
+  const onSubmitForm = (expense) => {
+    console.log(expense);
+  }
+  
   return (
     <div>
-      <NewExpense></NewExpense>
+      <NewExpense onSubmitForm={onSubmitForm}></NewExpense>
       <ExpenseList expenses={expenses}></ExpenseList>
     </div>
   );
