@@ -18,7 +18,10 @@ const ExpenseForm = ()=> {
             <label>Date</label>
             <input type="date" />
             </div>
+            <div className="form-item__control">
             <button type="submit"> Add Expense</button>
+            </div>
+          
             </div>
         </form>
     );

@@ -22,7 +22,6 @@ function ExpenseItem(props) {
       <div className="expense-item__price">
         <h2>{props.amount}</h2>
       </div>
-      <div><button onClick={onClick}>Update Title</button></div>
     </Card>
   );
 }
